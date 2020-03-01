@@ -1,7 +1,9 @@
 package com.example.www.letscook.presenters
 
+import android.content.Context
 import com.example.www.letscook.contracts.Recipe
 import com.example.www.letscook.models.RecipeModel
+import com.example.www.letscook.objects.RecipeDTO
 
 /**
  * Created by David Tamayo on 01/03/2020.
@@ -19,12 +21,12 @@ class RecipePresenter : Recipe.presenter{
         this.model = RecipeModel(this)
     }
 
-    override fun showResultToView(res: String) {
-        this.view?.showResult(res)
+    override fun showRecipesToView(recipesList : ArrayList<RecipeDTO>) {
+        this.view?.showRecipes(recipesList)
     }
 
-    override fun knowElementFromModel(res: String) {
-        this.model?.knowElement(res)
+    override fun knowRecipesFromModel(context : Context) {
+        this.model?.knowRecipes(context)
     }
 
 }
