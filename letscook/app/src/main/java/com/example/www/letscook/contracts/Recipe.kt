@@ -8,7 +8,7 @@ package com.example.www.letscook.contracts
 
 //Our contracts are a good way to follow the implementation of our architecture.
 // we will define here all those functions that we will need for each of our mvp layers.
-interface Food {
+interface Recipe {
 
     interface view{
         fun showResult(res:String)

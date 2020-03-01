@@ -5,15 +5,15 @@ package com.example.www.letscook.models
  * github: datt30
  */
 
-import com.example.www.letscook.contracts.Food
+import com.example.www.letscook.contracts.Recipe
 
 
-class FoodModel : Food.model {
+class RecipeModel : Recipe.model {
 
-    private var presenter : Food.presenter? = null
+    private var presenter : Recipe.presenter? = null
     private var dataElement : String = ""
 
-    constructor(presenter : Food.presenter){
+    constructor(presenter : Recipe.presenter){
         this.presenter = presenter
     }
 

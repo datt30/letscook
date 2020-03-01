@@ -1,7 +1,7 @@
 package com.example.www.letscook.presenters
 
-import com.example.www.letscook.contracts.Food
-import com.example.www.letscook.models.FoodModel
+import com.example.www.letscook.contracts.Recipe
+import com.example.www.letscook.models.RecipeModel
 
 /**
  * Created by David Tamayo on 01/03/2020.
@@ -9,14 +9,14 @@ import com.example.www.letscook.models.FoodModel
  */
 
 
-class FoodPresenter : Food.presenter{
+class RecipePresenter : Recipe.presenter{
 
-    private var view : Food.view? = null
-    private var model : Food.model? = null
+    private var view : Recipe.view? = null
+    private var model : Recipe.model? = null
 
-    constructor(view: Food.view) {
+    constructor(view: Recipe.view) {
         this.view = view
-        this.model = FoodModel(this)
+        this.model = RecipeModel(this)
     }
 
     override fun showResultToView(res: String) {

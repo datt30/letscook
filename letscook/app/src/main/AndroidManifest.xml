@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.www.letscook">
 
+    <!--Internet Permission-->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".views.FoodDetailView"></activity>
+        <activity android:name=".views.RecipeDetailView"></activity>
         <activity
             android:name=".views.SplashView"
             android:theme="@style/SplashTheme">
@@ -20,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".views.FoodView"
+            android:name=".views.RecipeView"
             android:theme="@style/AppTheme"></activity>
     </application>
 

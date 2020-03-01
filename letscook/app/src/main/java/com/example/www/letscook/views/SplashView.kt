@@ -11,7 +11,7 @@ class SplashView : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_view)
 
-        val intent = Intent(this, FoodView::class.java)
+        val intent = Intent(this, RecipeView::class.java)
         startActivity(intent)
         finish()
     }
