@@ -1,5 +1,6 @@
 package com.example.www.letscook.views
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.*
@@ -31,9 +32,11 @@ class RecipeView : AppCompatActivity(), Recipe.view{
         recipelistView = findViewById<ListView>(R.id.recipesListView)
         recipelistView.setOnItemClickListener(){adapterView, view, position, id ->
             val selectedRecipe = adapterView.getItemAtPosition(position) as RecipeDTO
-            Toast.makeText(this, "Click on item at ${selectedRecipe.id}", Toast.LENGTH_LONG).show()
+            val intent = Intent(this, RecipeDetailView::class.java)
+            intent.putExtra("recipeId",selectedRecipe.id)
+            startActivity(intent)
         }
-
+        //call our presenter to retrieve the list of recipes to show it in view
         getRecipes()
     }
 

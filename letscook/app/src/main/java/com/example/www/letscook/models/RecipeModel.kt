@@ -20,7 +20,6 @@ import org.json.JSONArray
 class RecipeModel : Recipe.model {
 
     private var presenter : Recipe.presenter? = null
-    private var dataElement : String = ""
 
     constructor(presenter : Recipe.presenter){
         this.presenter = presenter
@@ -38,7 +37,7 @@ class RecipeModel : Recipe.model {
         val stringReq = StringRequest(
             Request.Method.GET, url,
             Response.Listener<String> { response ->
-                val recipes: JSONArray = JSONArray(response.toString())
+                val recipes = JSONArray(response.toString())
                 for (i in 0 until recipes.length()) {
                     val recipeItemJson = recipes.getJSONObject(i)
                     recipesList.add(
@@ -50,7 +49,6 @@ class RecipeModel : Recipe.model {
                 }
                 //call presenter to show in view the recipes results
                 presenter!!.showRecipesToView(recipesList)
-
             },
             Response.ErrorListener { })
         queue.add(stringReq)
