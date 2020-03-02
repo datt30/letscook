@@ -1,4 +1,4 @@
-package com.example.www.letscook.views
+package com.example.www.letscook.adapters
 
 
 import android.app.Activity

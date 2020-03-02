@@ -7,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.www.letscook.R
-import com.example.www.letscook.contracts.RecipeDetail
+import com.example.www.letscook.contracts_mvp.RecipeDetail
 import com.example.www.letscook.objects.RecipeDTO
 import com.example.www.letscook.presenters.RecipeDetailPresenter
 import com.squareup.picasso.Picasso
@@ -20,6 +20,7 @@ class RecipeDetailView : AppCompatActivity(), RecipeDetail.view {
     private var presenter : RecipeDetail.presenter? = null
 
     //view widgets declaration
+    private lateinit var recipeTitle : TextView
     private lateinit var recipeImage : ImageView
     private lateinit var recipeStar1 : ImageView
     private lateinit var recipeStar2 : ImageView
@@ -34,6 +35,7 @@ class RecipeDetailView : AppCompatActivity(), RecipeDetail.view {
         setContentView(R.layout.activity_recipe_detail_view)
 
         //view widgets initialize
+        recipeTitle = findViewById<TextView>(R.id.recipeTitleTxt)
         recipeImage = findViewById<ImageView>(R.id.recipeImg)
         recipeStar1 = findViewById<ImageView>(R.id.star1)
         recipeStar2 = findViewById<ImageView>(R.id.star2)
@@ -53,6 +55,7 @@ class RecipeDetailView : AppCompatActivity(), RecipeDetail.view {
     }
 
     override fun showRecipeDetail(recipe: RecipeDTO) {
+        recipeTitle.text = recipe.title
         Picasso.get().load(recipe.image).into(recipeImage);
         recipeInstructions.text = recipe.instructions
         showStars(recipe.rating)

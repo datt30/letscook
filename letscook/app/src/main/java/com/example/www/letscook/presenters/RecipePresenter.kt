@@ -1,7 +1,7 @@
 package com.example.www.letscook.presenters
 
 import android.content.Context
-import com.example.www.letscook.contracts.Recipe
+import com.example.www.letscook.contracts_mvp.Recipe
 import com.example.www.letscook.models.RecipeModel
 import com.example.www.letscook.objects.RecipeDTO
 

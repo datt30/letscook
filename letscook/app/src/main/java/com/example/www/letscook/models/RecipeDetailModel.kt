@@ -10,9 +10,8 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
-import com.example.www.letscook.contracts.RecipeDetail
+import com.example.www.letscook.contracts_mvp.RecipeDetail
 import com.example.www.letscook.objects.RecipeDTO
-import org.json.JSONArray
 import org.json.JSONObject
 
 
