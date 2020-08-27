@@ -6,12 +6,14 @@ package com.example.www.letscook.models
  */
 
 import android.content.Context
+import android.widget.Toast
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
-import com.example.www.letscook.contracts_mvp.Recipe
+import com.example.www.letscook.contracts.Recipe
 import com.example.www.letscook.objects.RecipeDTO
+import com.example.www.letscook.views.RecipeAdapter
 import org.json.JSONArray
 
 
