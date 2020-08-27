@@ -1,4 +1,4 @@
-package com.example.www.letscook.contracts
+package com.example.www.letscook.contracts_mvp
 
 import android.content.Context
 import com.example.www.letscook.objects.RecipeDTO
